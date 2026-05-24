@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Resume Keyword Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <span class="badge">AI Portfolio Project</span>
+      <h1>AI Resume Keyword Analyzer</h1>
+      <p>
+        Compare your resume with a job description and get an AI-style analysis
+        including keyword match score, missing skills, strengths, and improvement tips.
+      </p>
+    </section>
+
+    <section class="layout">
+      <div class="card input-card">
+        <h2>Resume & Job Details</h2>
+
+        <label for="jobTitle">Target Job Title</label>
+        <input type="text" id="jobTitle" placeholder="Example: Web Developer, Data Analyst, AI Engineer" />
+
+        <label for="resumeText">Paste Resume Text</label>
+        <textarea id="resumeText" placeholder="Paste your resume content here..."></textarea>
+
+        <label for="jobDescription">Paste Job Description</label>
+        <textarea id="jobDescription" placeholder="Paste the job description here..."></textarea>
+
+        <button onclick="analyzeResume()">Analyze Resume</button>
+        <button class="secondary" onclick="loadDemo()">Load Demo Data</button>
+        <button class="danger" onclick="clearHistory()">Clear History</button>
+      </div>
+
+      <div class="card result-card">
+        <h2>Analysis Result</h2>
+        <div id="result" class="empty">
+          Paste your resume and job description, then click analyze.
+        </div>
+      </div>
+    </section>
+
+    <section class="card history-card">
+      <h2>Recent Analysis History</h2>
+      <div id="history"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
